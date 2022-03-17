@@ -15,6 +15,7 @@ public class Personaje {
     private int ataque;
     private int defensa;
     private double ta=0.8;
+    private String tipoAtaque="golpe";
     
     public Personaje()
     {
@@ -24,12 +25,14 @@ public class Personaje {
         this.setDefensa(30);
     }
     
-    public Personaje(String _nombre)
+    public Personaje(String _nombre, int _salud, int _ataque, int _defensa, double _ta, String _tipo)
     {
-        this.setNombre(_nombre);
-        this.setSalud(100);
-        this.setAtaque(24);
-        this.setDefensa(30);
+       this.nombre = _nombre;
+       this.ataque = _ataque;
+       this.salud = _salud;
+       this.defensa = _defensa;
+       this.ta = _ta;
+       this.tipoAtaque = _tipo;
     }
     
     public void setNombre(String _nombre)
@@ -89,10 +92,10 @@ public class Personaje {
         if(danho>0)
         {
             vidaRestante-=danho;
-            System.out.println(this.getNombre() + " ha recibido un golpe... Ha perdido "+danho+" vida");
+            System.out.println(this.getNombre() + " ha recibido un "+tipoAtaque+"... Ha perdido "+danho+" vida");
             
         }else{
-            System.out.println(this.getNombre()+" se ha librado de un golpe... Se prepara para atacar");
+            System.out.println(this.getNombre()+" se ha librado de un "+tipoAtaque+"... Se prepara para atacar");
         }
         this.setSalud(vidaRestante);
         System.out.println("La vida de "+ this.getNombre()+" es de" +this.salud);
