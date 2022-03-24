@@ -39,6 +39,7 @@ public class Computadora extends Personaje {
         }else{
             System.out.println(this.getNombre()+" se ha librado de un golpe... Se prepara para atacar");
         }
+        if(vidaRestante<0) vidaRestante=0;
         this.setSalud(vidaRestante);
         System.out.println("La vida de "+ this.getNombre()+" es de" +this.getSalud());
     }
@@ -52,11 +53,16 @@ public class Computadora extends Personaje {
             int salud = this.getSalud();
             salud +=10;
             this.setSalud(salud);
-            System.out.println("Jajaja... Si que eres debil");
-            System.out.println("Yo solo logre curarme"); 
+            System.out.println("Computadora: Jajaja... Si que eres debil");
+            System.out.println("Computadora: Yo solo logre curarme"); 
         }
         //else{
             
         //}
+    }
+
+    @Override
+    public void ganador() {
+        System.out.println("Computadora: La era de los robots invadirá el mundo... victoria!");
     }
 }

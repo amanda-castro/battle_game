@@ -27,8 +27,13 @@ public class Caballero extends Personaje {
             int defensa = super.getDefensa();
             defensa-=2;
             super.setDefensa(defensa);
-            System.out.println("Rufian, me hicisteis dañar mi armadura... Pagareis por ello");
+            System.out.println("Caballero: Rufian, me hicisteis dañar mi armadura... Pagareis por ello");
         }
         
+    }
+
+    @Override
+    public void ganador() {
+        System.out.println("Caballero: Victoria suprema para la realeza!!!");
     }
 }

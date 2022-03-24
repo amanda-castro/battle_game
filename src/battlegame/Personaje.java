@@ -9,7 +9,7 @@ package battlegame;
  *
  * @author amand
  */
-public class Personaje {
+public abstract class Personaje {
     private String nombre;
     private int salud;
     private int ataque;
@@ -85,6 +85,8 @@ public class Personaje {
         return this.ta;
     }
     
+    public abstract void ganador();
+    
     public void atacado(int _ataque)
     {
         int vidaRestante=this.getSalud();
@@ -97,8 +99,9 @@ public class Personaje {
         }else{
             System.out.println(this.getNombre()+" se ha librado de un "+tipoAtaque+"... Se prepara para atacar");
         }
+        if(vidaRestante<0) vidaRestante=0;
         this.setSalud(vidaRestante);
-        System.out.println("La vida de "+ this.getNombre()+" es de" +this.salud);
+        System.out.println("La vida de "+ this.getNombre()+" es de " +this.salud);
     }
     
     public void evitar()

@@ -28,7 +28,12 @@ public class Guerrero extends Personaje {
             int ataque = super.getAtaque();
             ataque+=2;
             super.setAtaque(ataque);
-            System.out.println("Pobre iluso... Tus golpes solo aumentan mi fuerza");
+            System.out.println("Guerrero: Pobre iluso... Tus golpes solo aumentan mi fuerza");
         }
+    }
+
+    @Override
+    public void ganador() {
+        System.out.println("Guerrero: Lastima, parece que no eras tan fuerte!");
     }
 }

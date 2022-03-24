@@ -24,8 +24,8 @@ public class Mago extends Personaje{
             int ataque = this.getAtaque();
             ataque +=20;
             this.setAtaque(ataque);
-            System.out.println("Vocatis tenebris copias");
-            System.out.println("Mi hechizo funciona... He mejorado mi ataque");
+            System.out.println("Mago: Vocatis tenebris copias");
+            System.out.println("Mago: Mi hechizo funciona... He mejorado mi ataque");
         }
     }
     
@@ -39,9 +39,14 @@ public class Mago extends Personaje{
             int salud = this.getSalud();
             salud+=15;
             this.setSalud(salud);
-            System.out.println("altiore sanitas");
-            System.out.println("Mi hechizo funciona... He recuperado mis fuerzas");
+            System.out.println("Mago: altiore sanitas");
+            System.out.println("Mago: Mi hechizo funciona... He recuperado mis fuerzas");
         }
         
+    }
+
+    @Override
+    public void ganador() {
+        System.out.println("La era de la alquimia... Victoria!!");
     }
 }
